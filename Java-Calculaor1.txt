@@ -1,0 +1,21 @@
+>import...
+
+class AdvancedCalculatorTest { 신규 *
+    AdvancedCalculator advancedCalc;
+
+    @BeforeEach
+    Void setUp() {
+        advancedCalc = new AdvancedCalculator();
+        advancedCalc.setNumbers(9, 3);
+    }
+
+    @Test 신규*
+    Void testMultiply() {
+        assertEquals(expected:27, advancedCalc.multiply());
+    }
+
+    @Test 신규*
+    Void  divide() {
+        assertEquals(expected:3, advancedCalc.divide());
+    }
+}
