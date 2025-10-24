@@ -1,0 +1,17 @@
+classDiagram         
+class AdvancedCalculator {
+-int num1
+-int num2
+-int result
++setNumbers(num1:int, num2:int): void
++multiply(): int
++divide(): int
++displayResult(operator:String): void
+}
+
+class ScientificCalculator {
++power(): int
++sqrt(): double
+} 
+
+ AdvancedCalculator <--- ScientificCalculator

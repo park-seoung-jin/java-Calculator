@@ -1,0 +1,20 @@
+sequenceDiagram
+participant Client
+participant ScientificCalculator
+participant AdvancedCalculator
+participant Calculator  
+
+Client ->> ScientificCalculator: setNumbers(5, 3)
+ScientificCalculator ->> AdvancedCalculator: setNumbers(num1, num2)
+Note right of AdvancedCalculator: num1 = 5, num2 = 3
+
+
+AdvancedCalculator->ScientificCalculator:int:power(),int:sqrt()
+ScientificCalculator -->> Client: result (125)
+Note right of ScientificCalculator:제곱과 제곱근 연산 수행함.
+
+Client ->> ScientificCalculator: displayResult("^")
+ScientificCalculator ->> AdvancedCalculator: displayResult();
+AdvancedCalculator -->> ScientificCalculator:displayResult("^");
+Note right of ScientificCalculator: "5^3 = 125" 출력
+ScientificCalculator -->> Client: void 반환

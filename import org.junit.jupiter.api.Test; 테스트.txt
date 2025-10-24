@@ -1,0 +1,26 @@
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
+
+    class ScientificCalculatorTest {
+        ScientificCalculator sciCalc;
+
+        @BeforeEach
+        void setUp() {
+            sciCalc = new ScientificCalculator();
+            sciCalc.setNumbers(5, 3); // 기본값을 (5^3)테스트용
+        }
+
+        @Test
+        void power() {
+            // 5^3 = 125
+            assertEquals(125.0, sciCalc.power(), 1e-9);
+        }
+
+        @Test
+        void sqrt() {
+            // sqrt 테스트를 위해 num1을 25로 설정 (num2는 사용하지 않음)
+            sciCalc.setNumbers(25, 0);
+            assertEquals(5.0, sciCalc.sqrt(), 1e-9);
+        }
+    }

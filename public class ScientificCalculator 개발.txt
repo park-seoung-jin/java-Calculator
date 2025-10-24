@@ -1,0 +1,15 @@
+public class ScientificCalculator extends AdvancedCalculator {
+
+    public int power() {
+        result = (int) Math.pow(num1, num2);
+        return result;
+    }
+
+    public double sqrt() {
+        double resultdouble = Math.sqrt(num1);
+
+        result = (int) Math.round(resultdouble);
+
+        return resultdouble;
+    }
+}
