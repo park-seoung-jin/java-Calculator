@@ -1,0 +1,19 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class FactorialTest {
+    Factorial factorial;
+
+    @BeforeEach
+    void setUp() {
+        factorial = new Factorial();
+        factorial.setNumbers(5); // <-변경할 테스트 숫자
+    }
+
+    @Test
+    void testFactorial() {
+        assertEquals(120, factorial.factorial()); // 5! = 120  결과 값
+    }
+}
